@@ -71,3 +71,8 @@ variable "webserver_sg_inboundrules" {
     }
   ]
 }
+
+variable "key_name" {
+  type = string
+  default = "DevOpsRushiMum"
+}

@@ -3,7 +3,7 @@ resource "aws_instance" "webserver" {
    instance_type = var.instance_type
    availability_zone = var.availability_zone
    vpc_security_group_ids = [aws_security_group.webserver_sg.id]
-   key_name = aws_key_pair.deployer.key_name
+   key_name = var.key_name
    tags = merge(var.commong_tags,{"Name": var.server_name})
 
 }
